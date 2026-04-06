@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #F5EDD8;
+    color: #3D1520;
+  }
+
+  body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'DM Serif Display', serif;
+  }
+
+  #root {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  *:focus-visible {
+    outline: 2px solid #D4621E;
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  .text-stamp {
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+  }
+
+  .text-pull {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .text-spec {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .clip-angled-top {
+    clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .clip-angled-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% 97%, 0 100%);
+  }
+
+  .grain-layer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.18;
+    mix-blend-mode: soft-light;
+    background-image: url('/grain.svg');
+    background-repeat: repeat;
+    background-size: 256px 256px;
+  }
+}
