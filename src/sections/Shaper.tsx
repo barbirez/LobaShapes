@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { SectionLabel } from '../components/ui/SectionLabel'
-import { ColorBlock } from '../components/ui/ColorBlock'
-import { slideLeft, slideRight, stagger, fadeUp } from '../lib/motion'
+import { slideLeft, slideRight } from '../lib/motion'
 
 export function Shaper() {
   return (

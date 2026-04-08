@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { SectionLabel } from '../components/ui/SectionLabel'
-import { ColorBlock } from '../components/ui/ColorBlock'
 import { boards } from '../data/boards'
 import { slideLeft, slideRight, stagger, fadeUp } from '../lib/motion'
 
