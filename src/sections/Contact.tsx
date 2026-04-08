@@ -194,13 +194,21 @@ export function Contact() {
                 Santa Catarina, Brazil
               </p>
 
-              <ColorBlock
-                color="#7A3B2E"
-                aspect="aspect-video"
-                label="Ilha de Santa Catarina"
-                labelColor="#E8A826"
-                className="mb-8"
-              />
+              <div className="relative w-full overflow-hidden bg-brown aspect-video mb-8 group">
+                <img
+                  src="/floripa-aerial.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  draggable={false}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-burgundy/70 via-burgundy/10 to-transparent" />
+                <div className="absolute bottom-3 left-4">
+                  <span className="font-label font-bold text-[11px] tracking-widest2 uppercase text-yellow">
+                    Ilha de Santa Catarina
+                  </span>
+                </div>
+              </div>
 
               <div className="space-y-4">
                 {[

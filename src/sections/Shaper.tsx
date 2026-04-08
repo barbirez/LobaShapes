@@ -3,13 +3,6 @@ import { SectionLabel } from '../components/ui/SectionLabel'
 import { ColorBlock } from '../components/ui/ColorBlock'
 import { slideLeft, slideRight, stagger, fadeUp } from '../lib/motion'
 
-const processSteps = [
-  { number: '01', label: 'Blank Selection', detail: 'PU & EPS blanks, locally sourced when possible' },
-  { number: '02', label: 'Shaping', detail: 'Hand-shaped, every board individually' },
-  { number: '03', label: 'Glassing', detail: 'Poly & epoxy resin, custom tints available' },
-  { number: '04', label: 'Sanding & Finish', detail: 'Gloss, matte, or sanded — your call' },
-]
-
 export function Shaper() {
   return (
     <section id="shaper" className="bg-cream py-section px-6 md:px-12">
@@ -56,42 +49,6 @@ export function Shaper() {
                 "The ocean doesn't care about your board — but you do. And you should."
               </p>
             </motion.blockquote>
-
-            {/* Process */}
-            <div className="mt-12">
-              <p className="font-label font-bold text-xs tracking-widest3 uppercase text-burgundy/40 mb-6">
-                The Process
-              </p>
-              <motion.div
-                variants={stagger}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                className="space-y-0"
-              >
-                {processSteps.map((step, i) => (
-                  <motion.div
-                    key={step.number}
-                    variants={fadeUp}
-                    className={`flex items-start gap-6 py-5 ${
-                      i < processSteps.length - 1 ? 'border-b border-burgundy/10' : ''
-                    }`}
-                  >
-                    <span className="font-mono text-sm text-orange/60 w-8 shrink-0 mt-0.5">
-                      {step.number}
-                    </span>
-                    <div>
-                      <p className="font-label font-bold text-base tracking-widest uppercase text-burgundy mb-1">
-                        {step.label}
-                      </p>
-                      <p className="font-serif italic text-sm text-burgundy/50">
-                        {step.detail}
-                      </p>
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </div>
           </motion.div>
 
           {/* Right — color blocks */}
@@ -102,26 +59,41 @@ export function Shaper() {
             viewport={{ once: true, amount: 0.2 }}
             className="flex flex-col gap-4 lg:pt-20"
           >
-            <ColorBlock
-              color="#7A3B2E"
-              aspect="aspect-[4/5]"
-              label="In the shaping bay"
-              labelColor="#E8A826"
-              hover
-            />
+            <div className="relative w-full overflow-hidden bg-brown aspect-[4/5] group">
+              <img
+                src="/shaper-shaping.png"
+                alt="Loba shaping a surfboard"
+                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                draggable={false}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-burgundy/55 via-burgundy/10 to-transparent" />
+              <div className="absolute bottom-3 left-4">
+                <span className="font-label font-bold text-[11px] tracking-widest2 uppercase text-yellow">
+                  In the shaping bay
+                </span>
+              </div>
+            </div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              <ColorBlock
-                color="#D4621E"
-                aspect="aspect-[16/7]"
-                label="Florianópolis, SC"
-                labelColor="#F5EDD8"
-                hover
-              />
+              <div className="relative w-full overflow-hidden bg-orange aspect-[16/7] group">
+                <img
+                  src="/floripa-water.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  draggable={false}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-burgundy/60 via-burgundy/10 to-transparent" />
+                <div className="absolute bottom-3 left-4">
+                  <span className="font-label font-bold text-[11px] tracking-widest2 uppercase text-cream">
+                    Florianópolis, SC
+                  </span>
+                </div>
+              </div>
             </motion.div>
           </motion.div>
         </div>

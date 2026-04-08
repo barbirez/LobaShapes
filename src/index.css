@@ -13,12 +13,12 @@
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: 'DM Serif Display', serif;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   }
 
   #root {
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   *:focus-visible {
@@ -35,7 +35,7 @@
   }
 
   .text-pull {
-    font-family: 'DM Serif Display', serif;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
     font-style: italic;
     font-size: 1.5rem;
     line-height: 1.3;

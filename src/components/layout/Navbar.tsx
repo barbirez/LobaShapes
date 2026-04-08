@@ -20,14 +20,15 @@ export function Navbar() {
       transition={{ duration: 0.6, delay: 1.4, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
-        <a
-          href="#"
-          className="font-display text-2xl text-burgundy tracking-widest2 hover:text-orange transition-colors duration-300"
-        >
-          LOBA
+        <a href="#" className="flex items-center group">
+          <img
+            src="/loba-shapes-logo.svg"
+            alt="Loba Shapes"
+            className="h-16 w-auto transition-opacity duration-300 group-hover:opacity-70"
+          />
         </a>
         <div className="hidden md:flex items-center gap-10">
-          {['Boards', 'Shaper', 'Order', 'Contact'].map((item) => (
+          {['Boards', 'Shaper', 'Process', 'Order', 'Contact'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}

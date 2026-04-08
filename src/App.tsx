@@ -4,6 +4,7 @@ import { Footer } from './components/layout/Footer'
 import { Hero } from './sections/Hero'
 import { Boards } from './sections/Boards'
 import { Shaper } from './sections/Shaper'
+import { Process } from './sections/Process'
 import { CustomOrders } from './sections/CustomOrders'
 import { InTheWater } from './sections/InTheWater'
 import { Contact } from './sections/Contact'
@@ -17,6 +18,7 @@ function App() {
         <Hero />
         <Boards />
         <Shaper />
+        <Process />
         <CustomOrders />
         <InTheWater />
         <Contact />

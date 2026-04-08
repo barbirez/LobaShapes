@@ -15,7 +15,7 @@ export default {
       fontFamily: {
         display: ['"Bebas Neue"', 'sans-serif'],
         label: ['"Barlow Condensed"', 'sans-serif'],
-        serif: ['"DM Serif Display"', 'serif'],
+        serif: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
         mono: ['"Space Mono"', 'monospace'],
       },
       fontSize: {
